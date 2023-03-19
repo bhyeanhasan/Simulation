@@ -7,6 +7,6 @@
 [2.4 value of PI](2.4%20Value%20of%20PI.ipynb)<br>
 [2.5 Random Walk](2.5%20Random%20Walk.ipynb)<br>
 [2.6 Bearing Reliablity](2.6%20Bearing%20Reliability.ipynb)<br>
-[(Exercise) Number of Strike](Number%20of%20Strike.ipynb)<br>
+[2.7 Number of Strike](Number%20of%20Strike.ipynb)<br>
 [(Exercise) Number of Strike Circular](Number%20of%20Strike%20Circular.ipynb)<br>
 
