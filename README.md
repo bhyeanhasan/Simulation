@@ -8,5 +8,7 @@
 [2.5 Random Walk](2.5%20Random%20Walk.ipynb)<br>
 [2.6 Bearing Reliablity](2.6%20Bearing%20Reliability.ipynb)<br>
 [2.7 Number of Strike](Number%20of%20Strike.ipynb)<br>
+[2.8 A Hinge Assembly](2.8%20A%20Hinge%20Assembly.ipynb)<br>
 [(Exercise) Number of Strike Circular](Number%20of%20Strike%20Circular.ipynb)<br>
+[(Exercise) Random Walk 3D](Random%20Walk%203D.ipynb)<br>
 
