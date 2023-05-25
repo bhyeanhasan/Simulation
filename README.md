@@ -1,6 +1,9 @@
 # Simulation
 6th semester
 
+
+```pip install shapely```
+
 [2.1 Area Of An Irregular Shape](2.1%20Area%20of%20an%20Irregular%20Shape.ipynb)<br>
 [2.2 Gambling](2.2%20Gambling.ipynb)<br>
 [2.3 Integration](2.3%20Numerical%20Integration.ipynb)<br>
