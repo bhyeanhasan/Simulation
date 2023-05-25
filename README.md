@@ -28,4 +28,5 @@
 pip install shapely
 pip install matplotlib
 ```
-
+#### YouTube Playlist
+https://youtube.com/playlist?list=PLR6Sjm-9CZcYi7ZAOv-D-LfaGf1XdjCMv
