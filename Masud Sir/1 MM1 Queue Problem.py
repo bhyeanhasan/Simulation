@@ -1,45 +1,45 @@
 import random
 import numpy as np
+import matplotlib.pyplot as plt
 
 
-def MM1(total_time, mean_arrival_time, mean_service_time):
-    inter_arrival_time = []
-    service_time = []
+def MM1(maximum_number_of_customers, mean_arrival_time, mean_service_time):
+    customer = []
     wait_time = []
-    system_idle_time = []
-    time = 0
-
-    arrival_service_time = {}
-    number_of_process = int(np.random.poisson(mean_arrival_time))
+    system_idle_time = 0
+    time = 0.0
+    number_of_process = maximum_number_of_customers
 
     for i in range(number_of_process):
-        arrival = np.random.exponential(1 / mean_arrival_time) * 60 * 60
-        inter_arrival_time.append(arrival)
-        service = np.random.exponential(1 / mean_service_time) * 100
-        service_time.append(service)
-        arrival_service_time[arrival] = service
+        arrival = np.random.exponential(1 / mean_arrival_time) * 60
+        service = np.random.exponential(1 / mean_service_time) * 60
+        data = [arrival, service]
+        customer.append(data)
 
-    inter_arrival_time.sort()
+    customer.sort(key=lambda x: x[0])
+    print(customer)
 
     for i in range(number_of_process):
-        wait = time - inter_arrival_time[i]
-        if wait > 0:
-            wait_time.append(wait)
+
+        if time < customer[i][0]:  # System delay calculate kore nilam
+            system_idle_time += abs(time - customer[i][0])
+            time = customer[i][0]
+
+        if time > customer[i][0]: # Wait time calculation
+            wait_time.append(abs(time - customer[i][0]))
         else:
             wait_time.append(0)
-            system_idle_time.append(abs(wait))
 
-        print("Process ", i, " arrived at ", inter_arrival_time[i])
-        print("Process ", i, " get service at ", inter_arrival_time[i] + wait_time[i])
-        print("Process ", i, " wait time ", wait_time[i])
-        time = time + arrival_service_time[inter_arrival_time[i]]
-        print("Process ", i, " end at ", time)
-        print("\n")
+        time = time + customer[i][1]
 
     average_wait = sum(wait_time) / number_of_process
-    print("Average Wait time ", average_wait)
-    average_sytem_idle = ((time - sum(system_idle_time)) / time) * 100
-    print("System utilization ", average_sytem_idle, " %")
+    print("Average Delay in Queue ", round(average_wait, 2), " Seconds")
+    average_sytem_idle = ((time - system_idle_time) / time) * 100
+    print("System utilization ", round(average_sytem_idle, 2), " %")
+    print("Time Simulation Ended ", round(time, 2), " Seconds")
+
+    plt.barh(y=[i for i in range(number_of_process)], width=wait_time, left=[i[0] for i in customer])
+    plt.show()
 
 
-MM1(120, 53.33, 17.5)
+MM1(5, 53.33, 17.5)
