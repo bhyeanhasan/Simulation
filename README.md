@@ -1,4 +1,4 @@
-## Simulation and Modeling
+## Lab Problem for Simulation and Modeling
 ###### 6th semester sessional
 
 #### Chapter 2 
