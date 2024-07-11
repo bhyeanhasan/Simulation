@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+# code added
+
 def MM1(maximum_number_of_customers, mean_arrival_time, mean_service_time):
     customer = []
     wait_time = []
