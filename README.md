@@ -1,5 +1,5 @@
 ## Simulation and Modeling
-###### 6th semester
+###### 6th semester sessional
 
 #### Chapter 2 
 * [2.1 Area Of An Irregular Shape](2.1%20Area%20of%20an%20Irregular%20Shape.ipynb)<br>
